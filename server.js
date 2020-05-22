@@ -1,4 +1,4 @@
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 5000;
 // Chunk 1
 require('dotenv').config();
 const express = require('express');
@@ -14,7 +14,7 @@ var fs = require('fs');
  app.use(express.static(path.join(__dirname, 'public')));
 
 ///////
-const PORT = 8080;
+const PORT = process.env.PORT || 5000;
 // Data parsing
 app.use(express.urlencoded({
     extended: false

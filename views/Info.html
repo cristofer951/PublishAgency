@@ -13,6 +13,10 @@
     <link href="../css/flexslider.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />   
     <link href="../css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- JAVASCRIPT -->
     <script src="../js/Validaciones.js"></script>
     <script src="../js/conexion.js"></script> 
     <script src="../Php/correo.php"></script>
@@ -29,7 +33,10 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/animate.js"></script>
-    <script src="js/custom.js"></script>   
+    <script src="js/custom.js"></script>  
+    
+    
+
   </head>
 
   <body>
@@ -146,9 +153,31 @@
                                 </div>
                             </div> 
                             <div class="col-sm-12">
-                                <input type="submit" id="send_email" onclick="validar();"   name="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" class="form-control" value="ENVIAR" />                         
+                                <input type="submit" id="send_email" onclick="document.getElementById('id01').style.display='block'"  name="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" class="form-control" value="ENVIAR" />                         
                                 <div id="resultado"></div>                                   
                             </div>
+
+                            <div id="id01" class="w3-modal">
+                                <div class="w3-modal-content w3-animate-top w3-card-4">
+                                    <header class="w3-container w3-teal"> 
+                                    <span onclick="document.getElementById('id01').style.display='none'" 
+                                    class="w3-button w3-display-topright">&times;</span>
+                                    <h2>Hola, Estas a punto de Emprender un nuevo viaje</h2>
+                                    </header>
+                                    <div class="w3-container">
+                                    <p>Grascias Por contactarnos en breves recibiras un correo de uno de nuestro asesores.</p>
+                                    
+                                    </div>
+                                    <footer class="w3-container w3-teal">
+                                    
+                                    <p>whatsapp:+57 3016599114</p>
+                                    <a href="https://api.whatsapp.com/send?phone=573016599114&text=<<Estoy interesa en el Curso en Malta!!>>" target ="_blank" data-action="share/whatsapp/share">Share via Whatsapp</a>
+                                   
+                                    <p>Triptolearn1@gmail.com</p>
+                                    </footer>
+                                </div>
+                                </div>  
+
                   </div>
             </div>      
         </div>
@@ -262,10 +291,11 @@ debugger
 debugger
         $.post("/email", data)
           .then(() => {
-            window.location.href = "/email/sent";
+
+            //window.location.href = "/Info.html";
           })
           .catch(() => {
-            window.location.href = "/error";
+            window.location.href = "/index.html";
           });
       });
     </script>

@@ -49,12 +49,12 @@ app.get('/index.html', (req, res) => {
 });
 // Error page
 app.get('/error', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'error.html'));
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Email sent page
 app.get('/email/sent', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'emailMessage.html'));
+    res.sendFile(path.join(__dirname, 'views', 'Info.html'));
 });
 
 //Acomodaciones

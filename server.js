@@ -1,3 +1,4 @@
+
 var port = process.env.PORT || 5000;
 // Chunk 1
 require('dotenv').config();
@@ -20,7 +21,6 @@ app.use(express.urlencoded({
     extended: false
 }));
 app.use(express.json());
-
 
 
 // email, subject, text

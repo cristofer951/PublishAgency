@@ -25,6 +25,7 @@ app.use(express.json());
 
 // email, subject, text
 app.post('/email', (req, res) => {
+    debugger
     const { subject, email, text } = req.body;
     log('Data: ', req.body);
 
